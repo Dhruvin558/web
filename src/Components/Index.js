@@ -1,8 +1,15 @@
 import React from "react";
 
+import { Button, Popover, QRCode } from 'antd';
+
 const Index=()=>{
     return(
-        <div>Index page</div>
+        <Popover
+    overlayInnerStyle={{ padding: 0 }}
+    content={<QRCode value="https://picsum.photos/200/300" bordered={false} />}
+  >
+    <Button type="primary">Hover me</Button>
+  </Popover>
     )
 }
 

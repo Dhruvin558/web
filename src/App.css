@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -40,4 +41,17 @@
 
 .Form {
   text-align: center;
+}
+
+.marg{
+  
+  margin-top: 50;
+  margin-left: 250;
+   margin-right: 250;
+  margin-bottom: 50;
+}
+
+.icon{
+  text-align: right;
+  font-size: large;
 }

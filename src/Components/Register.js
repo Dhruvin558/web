@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button,Form,FormGroup,Input,Label,Row,Col, } from 'reactstrap';
+import { Form,FormGroup,Input,Label,Row,Col, } from 'reactstrap';
+import Button from '@mui/material/Button';
 
 
 const Register = () =>{
-    return(<Form >
+    return(<Form className="marg" >
         <Row>
           <Col md={6}>
             <FormGroup>
@@ -84,6 +85,7 @@ const Register = () =>{
               <Input
                 id="exampleZip"
                 name="zip"
+                maxLength={6}
               />
             </FormGroup>
           </Col>
@@ -102,7 +104,7 @@ const Register = () =>{
           </Label>
         </FormGroup>
           <div className="Form">
-        <Button >
+        <Button variant="outlined" >
           <Link to="/Home" >Sign Up</Link>
         </Button>
       </div>

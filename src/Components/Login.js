@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button,Form,FormGroup,Input,Label, } from 'reactstrap';
-
+import { Form,FormGroup,Input,Label, } from 'reactstrap';
+import Button from '@mui/material/Button';
 
 const Login = ()=>{
     return(
 
-        <>
+        <div className="marg">
   <Form className="Form">
-    <FormGroup floating>
+    <FormGroup floating className="Form">
       <Input
         id="exampleEmail"
         name="email"
@@ -32,15 +32,15 @@ const Login = ()=>{
       </Label>
     </FormGroup>
     {' '}
-    <Button>
+    <Button variant="outlined">
     <Link to="/Home">Login</Link>
     </Button>
     {' '}
-    <Button>
+    <Button variant="outlined">
       <Link to="/Register">Sign Up</Link>
     </Button>
   </Form>
-</>
+</div>
     )
 }
 
