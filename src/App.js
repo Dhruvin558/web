@@ -1,4 +1,5 @@
 import './App.css';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -9,6 +10,10 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Login from './Components/Login.js';
 import Register from './Components/Register';
+import Abc from './Components/Abc.js'
+
+
+
 
 function App() {
   return (
@@ -21,6 +26,7 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/register" element={<Register />}/>
+          <Route path="/Abc" element={<Abc />}/>
         </Routes>
       </div>
     </Router>

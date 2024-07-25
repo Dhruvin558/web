@@ -39,19 +39,32 @@
 }
 
 
-.Form {
+.fform {
   text-align: center;
 }
 
-.marg{
-  
-  margin-top: 50;
-  margin-left: 250;
-   margin-right: 250;
-  margin-bottom: 50;
+
+.fbg{
+  /* background-color: #61dafb; */
+  color: blueviolet;
+ margin: auto;  
+ 
+}
+.container{
+  margin: auto;
 }
 
-.icon{
-  text-align: right;
-  font-size: large;
+.marg{
+  margin-top: 20px; 
+  margin-left: 300px;
+  margin-right: 500px;
+
 }
+
+.form{
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 50% auto;
+  
+}
+
