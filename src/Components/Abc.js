@@ -31,7 +31,8 @@ const Abc = () => {
 
     return (
         <div>
-            {notify && <p>{notify}</p>}
+            {/* {notify && <p>{notify}</p>} */}
+            <span className="notify">{notify}</span>
             <form onSubmit={onSubmit} className="marg">
                 <input
                     type="text"
