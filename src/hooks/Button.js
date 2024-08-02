@@ -7,7 +7,7 @@ const Button =()=>{
     const value = useContext(counterContext)
     return(
         <div>
-            <button onClick={() => value.SetCount((count) => count + 1)} ><span><Component1 /></span>Click me</button>
+            <button onClick={() => value.setCount((count) => count + 1)} ><span><Component1 /></span>Click me</button>
             {/* <button ><span><Component1 /></span>number</button> */}
             
         </div>
