@@ -3,10 +3,12 @@ import { db } from './firebase';
 import { ref, get } from 'firebase/database';
 import DeleteB from './DeleteB';
 import './data.css';
+import EditUser from './Update';
+
 
 const Getdata = () => {
-    // edit data
-    const [editUser,setEditUser] = useState(null)
+  // edit data
+  const [editUser, setEditUser] = useState(null)
   const [users, setUsers] = useState([]);
   const [notify, setNotify] = useState('');
 
@@ -33,7 +35,7 @@ const Getdata = () => {
     fetchData();
   }, []);
 
-// delete data
+  // delete data
 
   const handleDelete = (deleteUserId) => {
     setUsers((prevUsers) => prevUsers.filter((user) => user.id !== deleteUserId));
@@ -42,12 +44,24 @@ const Getdata = () => {
 
   //edit-update data
 
-const handleEdit = (user)=>{
-
-}
-
-
-
+  const handleEdit = (user) => {
+    setEditUser(user)
+  }
+  // handleCloseEdit
+  const handleCloseEdit = () => {
+    setEditUser(null);
+  }
+  // handleUpdateUser
+  const handleUpdateUser = (userid, updateFirstName, updateLastName) => {
+    setUsers((PrevUser) =>
+    
+      PrevUser.map((user) =>
+        user.id === userid ? {
+          ...user,
+          firstname: updateFirstName,
+          lastName: updateLastName}:user
+        ) )
+  }
 
 
   return (
@@ -74,15 +88,18 @@ const handleEdit = (user)=>{
                 <td>
                   <DeleteB userid={user.id} onDelete={handleDelete} setNotify={setNotify} />
                 </td>
-                <td><button onClick={handleEdit}>Edit</button></td>
+                <td><button onClick={() => handleEdit(user)}>Edit</button></td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      
-      { editUser && (
-        <h1>Edit Data</h1>
+
+      {editUser && (
+        <EditUser user={editUser}
+          onclose={handleCloseEdit}
+          onUpdate={handleUpdateUser}
+        />
       )}
     </>
   );

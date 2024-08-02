@@ -10,8 +10,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Login from './Components/Login.js';
 import Register from './Components/Register';
-import Abc from './Components/Abc.js'
-
+import Abc from './Components/Data form fire/Abc.js'
 
 
 

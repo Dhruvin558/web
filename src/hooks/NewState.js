@@ -18,18 +18,18 @@ const NewState = () => {
         btnRef.current.style.backgroundColor = "yellow"
     }, [])
 
-
+ 
 
     return (
         <>
         <counterContext.Provider value={{count , SetCount}}>
         <div>
+            {/* <NavbarHooks count={count}/> */}
             <NavbarHooks />
             <Newline  />
             <h3>count number {count}</h3>
             <h2>total name {name}</h2>
             <button ref={btnRef} onClick={() => SetCount(count + 1)}>+Number</button>
-
         </div>
         </counterContext.Provider>
         </>

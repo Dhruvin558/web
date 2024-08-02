@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import {  FormGroup, Input, Label, Row, Col, } from 'reactstrap';
 // import Button from '@mui/material/Button';
-import { db } from "./firebase"
+import { db } from "./Data form fire/firebase"
 import { ref, set } from "firebase/database";
 
 const Register = () => {
