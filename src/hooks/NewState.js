@@ -4,10 +4,10 @@ import NavbarHooks from "./NavbarHooks"
 import { counterContext } from "./Context/Context";
 
 
-const num = new Array(50_000_000).fill(0).map((_, i) => {
+const num = new Array(5_000_000).fill(0).map((_, i) => {
     return {
         index: i,
-        isMynumis: i === 40_000_000
+        isMynumis: i === 1_000_000
     }
 })
 
@@ -22,7 +22,7 @@ const NewState = () => {
     // memo
     const magical = useMemo(() => number.find(item => item.isMynumis === true), [number])
 
-    const btnRef = useRef()
+    // const btnRef = useRef()
 
     // useEffect(() => {
     //     alert("number is changed")
@@ -53,10 +53,10 @@ const NewState = () => {
                     <button onClick={() => {
                         setCount(count + 1);
                         if (count === 10) {
-                            setNumber(new Array(80_000_000).fill(0).map((_, i) => {
+                            setNumber(new Array(10_000_000).fill(0).map((_, i) => {
                                 return {
                                     index: i,
-                                    isMynumis: i === 70_000_000
+                                    isMynumis: i === 9_999_000
                                 }
                             }))
                         }
